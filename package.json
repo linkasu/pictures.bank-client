@@ -1,7 +1,7 @@
 {
   "name": "pictures.bank-api",
-  "version": "1.0.0",
-  "main": "dist/index.ts",
+  "version": "1.0.1",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "ibakaidov",
   "license": "MIT",
