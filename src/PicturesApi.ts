@@ -46,4 +46,14 @@ export class PicturesApi {
     removeCategory(pictureId: string, categoryId: string): Promise<void> {
         return this.axiosInstance.post(`/picture/${pictureId}/unlinkFromCategory`, { categoryId });
     }
+    renamePicture(id: string, name: string): Promise<Picture> {
+        return this.axiosInstance.post(`/picture/${id}/rename`, { name });
+    }
+    searchPictures(query: string): Promise<Picture[]> {
+        return this.axiosInstance.get(`/picture/search/`, {
+            params: {
+                query
+            }
+        });
+    }
 }
