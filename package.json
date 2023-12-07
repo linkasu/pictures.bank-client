@@ -1,0 +1,18 @@
+{
+  "name": "pictures.bank-api",
+  "version": "1.0.0",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
+  "author": "ibakaidov",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "@types/node": "^20.10.4",
+    "axios": "^1.6.2",
+    "typescript": "^5.3.3"
+  }
+}
