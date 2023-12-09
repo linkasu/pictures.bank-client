@@ -8,18 +8,18 @@ export class CategoriesApi {
     constructor(private axiosInstance: AxiosInstance) { }
 
     async createCategory(input: CreateCategoryInput): Promise<Category> {
-        const response = await this.axiosInstance.post<Category>("/catetory/create", input);
+        const response = await this.axiosInstance.post<Category>("/category/create", input);
         return response.data;
     }
     async updateCategory(id: string, input: CreateCategoryInput): Promise<Category> {
-        const response = await this.axiosInstance.put<Category>(`/catetory/${id}`, input);
+        const response = await this.axiosInstance.put<Category>(`/category/${id}`, input);
         return response.data;
     }
     async getCategories(): Promise<Category[]> {
-        const response = await this.axiosInstance.get<Category[]>("/catetory/all");
+        const response = await this.axiosInstance.get<Category[]>("/category/all");
         return response.data;
     }
     async deleteCategory(id: string): Promise<void> {
-        await this.axiosInstance.delete(`/catetory/${id}`);
+        await this.axiosInstance.delete(`/category/${id}`);
     }
 }
