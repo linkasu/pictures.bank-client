@@ -25,9 +25,9 @@ export class PicturesApi {
         return this.axiosInstance.post("/picture/create", data).then(response => response.data);
     }
 
-    uploadPicture(id: string, file: Buffer): Promise<Picture> {
+    uploadPicture(id: string, file: Buffer, filename: string): Promise<Picture> {
         const formData = new FormData();
-        formData.append('file', file);
+        formData.append('file', file, filename);
         return this.axiosInstance.post(`/picture/${id}/upload`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
