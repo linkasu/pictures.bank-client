@@ -9,7 +9,7 @@ npm i -S https://github.com/linkasu/pictures.bank-client.git
 yarn add https://github.com/linkasu/pictures.bank-client.git
 ```
 ## Usage
-``typescript
+```typescript
 const api = new PictureBankApi() // Create an instance of the API (Read access)
 // OR
 const api = new PictureBankApi('APP-KEY') // Create an instance of the API (Wite access)
