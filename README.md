@@ -5,8 +5,8 @@ Thhis is a library of pictures for LINKa bank service (https://pictures.linka.su
 
 ## Installation
 ```bash
-npm i -S @linkasoft/pictures-bank
-yarn add @linkasoft/pictures-bank
+npm i -S https://github.com/linkasu/pictures.bank-client.git
+yarn add https://github.com/linkasu/pictures.bank-client.git
 ```
 ## Usage
 ``typescript
