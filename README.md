@@ -30,3 +30,16 @@ const pictures = await api.pictures.searchPictures('search-query')
 ```
 https://pictures.linka.su/picture/{id}/buffer
 ```
+
+## Types
+```typescript  
+interface Picture {
+  id: string
+  name: string
+  categories: string[] // Category ids
+}
+interface Category {
+    id: string;
+    name: string;
+}
+```
