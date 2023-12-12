@@ -6,7 +6,7 @@ export class PicturesApi {
     constructor(private axiosInstance: AxiosInstance) { }
 
     getAllPictures(): Promise<Picture[]> {
-        return this.axiosInstance.get("/picture/all").then(response => response.data)  
+        return this.axiosInstance.get("/picture/all").then(response => response.data)
     }
 
     getPicturesByCategory(categoryId: string): Promise<Picture[]> {
@@ -18,14 +18,14 @@ export class PicturesApi {
     }
 
     getPictureBufferById(id: string): Promise<Buffer> {
-        return this.axiosInstance.get(`/picture/${id}/buffer`, {responseType: 'arraybuffer'}).then(response => response.data).then(response => response.data);
+        return this.axiosInstance.get(`/picture/${id}/buffer`, { responseType: 'arraybuffer' }).then(response => response.data).then(response => response.data);
     }
 
     createPicture(data: CreatePictureInput): Promise<Picture> {
         return this.axiosInstance.post("/picture/create", data).then(response => response.data);
     }
 
-    uploadPicture(id: string, file: Buffer|File, filename: string): Promise<Picture> {
+    uploadPicture(id: string, file: Buffer | File, filename: string): Promise<Picture> {
         const formData = new FormData();
         formData.append('file', file, filename);
         return this.axiosInstance.post(`/picture/${id}/upload`, formData, {
@@ -54,6 +54,6 @@ export class PicturesApi {
             params: {
                 query
             }
-        }).then(response => response.data).then(response => response.data);
+        }).then(response => response.data);
     }
 }
